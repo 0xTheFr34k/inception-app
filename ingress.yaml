@@ -5,7 +5,7 @@ metadata:
   namespace: dev
 spec:
   entryPoints:
-    - web
+    - playground
   routes:
     - kind: Rule
       match: PathPrefix(`/playground`)
