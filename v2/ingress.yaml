@@ -8,7 +8,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`playground.local`)
+      match: Host(`playground.local`) && PathPrefix(`/v2`)
       services:
         - name: playground
           port: 8888
