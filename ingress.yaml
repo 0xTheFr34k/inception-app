@@ -3,9 +3,12 @@ kind: Ingress
 metadata:
   name: playground
   namespace: dev
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - http:
+  - host: playground.local
+    http:
       paths:
       - path: /
         pathType: Prefix
@@ -14,3 +17,4 @@ spec:
             name: playground
             port:
               number: 8888
+
