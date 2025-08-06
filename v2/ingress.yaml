@@ -11,6 +11,6 @@ spec:
       match: Host(`playground.local`) && PathPrefix(`/v2`)
       services:
         - name: playground-v2
-          port: 8889
+          port: 8888
   tls:
     certResolver: default

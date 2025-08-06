@@ -7,6 +7,6 @@ spec:
   selector:
     app: playground-v2
   ports:
-  - port: 8889
+  - port: 8888
     targetPort: 8888
   type: ClusterIP
