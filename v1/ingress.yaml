@@ -1,7 +1,7 @@
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: playground
+  name: playground-v1
   namespace: dev
 spec:
   entryPoints:
@@ -10,7 +10,7 @@ spec:
     - kind: Rule
       match: Host(`playground.local`) && PathPrefix(`/v1`)
       services:
-        - name: playground
+        - name: playground-v1
           port: 8888
   tls:
     certResolver: default
