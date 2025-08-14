@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: playground
+  name: playground-v1
   namespace: dev
   # annotations:
   #   nginx.ingress.kubernetes.io/rewrite-target: /
@@ -13,6 +13,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: playground
+            name: playground-v1
             port:
               number: 8888
